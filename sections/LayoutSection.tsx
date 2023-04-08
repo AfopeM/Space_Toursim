@@ -8,24 +8,26 @@ type LayoutSectionProps = {
 
 //prettier-ignore
 export default function LayoutSection({pageName, children }: LayoutSectionProps) {
+
     const pages = [
         {
-          name: "home",
-          content: "bg-homeM md:bg-homeT lg:bg-homeD",
+            name: "home",
+            content: "bg-homeM md:bg-homeT lg:bg-homeD gap-0",
         },
         {
-          name: "destination",
-          content: "bg-destinationM md:bg-destinationT lg:bg-destinationD",
+            name: "destination",
+            content: "bg-destinationM md:bg-destinationT lg:bg-destinationD",
         },
         {
-          name: "crew",
-          content: "bg-crewM md:bg-crewT lg:bg-crewD",
+            name: "crew",
+            content: "bg-crewM md:bg-crewT lg:bg-crewD",
         },
         {
-          name: "technology",
-          content: "bg-technologyM md:bg-technologyT lg:bg-technologyD",
+            name: "technology",
+            content: "bg-technologyM md:bg-technologyT lg:bg-technologyD",
         },
-      ];
+    ];
+    // console.log(pages);
 
   return (
     <div

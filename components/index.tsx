@@ -1,2 +1,3 @@
 import Navbar from "./Navbar";
-export { Navbar };
+import Textbox from "./TextBox";
+export { Navbar, Textbox };

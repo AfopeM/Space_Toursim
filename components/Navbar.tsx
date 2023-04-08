@@ -19,14 +19,12 @@ export default function Navbar({ pageName }: NavbarProps) {
   return (
     <nav className="relative flex h-24 items-center justify-between font-barlow">
       {/* LOGO */}
-      <Link href="/" className="relative h-10 w-10 md:h-14 md:w-12">
-        <Image
-          fill
-          priority
-          alt="logo"
-          src="/./logo.svg"
-          className="object-contain"
-        />
+      <Link
+        href="/"
+        className="relative h-10 w-10 md:h-14 md:w-12"
+        as={`image`}
+      >
+        <Image fill alt="logo" src="/./logo.svg" className="object-contain" />
       </Link>
 
       {/* DESKTOP MENU */}
