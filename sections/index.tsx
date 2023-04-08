@@ -1,2 +1,3 @@
 import LayoutSection from "./LayoutSection";
-export { LayoutSection };
+import TabSection from "./TabSection";
+export { LayoutSection, TabSection };

@@ -35,7 +35,7 @@ export default function LayoutSection({pageName, children }: LayoutSectionProps)
         .map((page) => (page.name === pageName ? page.content : ""))
         .join(
           ""
-        )} grid h-screen w-screen grid-rows-main gap-8 bg-cover px-6 md:px-12 
+        )} grid h-screen w-screen grid-rows-main md:gap-8 bg-cover px-6 md:px-12 
       lg:p-12 lg:pb-20`}>
         <Navbar pageName={pageName}/>
       {children}
