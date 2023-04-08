@@ -1,9 +1,11 @@
+import { LayoutSection } from "@/sections";
+
 export default function Home() {
   const pageName = "home";
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
-      Home Page
-    </main>
+    <LayoutSection pageName={pageName}>
+      <main>Home Page</main>
+    </LayoutSection>
   );
 }
