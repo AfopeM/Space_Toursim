@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { tabVariant } from "@/utils/motion";
 import { Textbox } from "@/components";
 
+//prettier-ignore
+{/* BUTTON TAB IMAGE */}
 type ButtonTabsImageProps = {
   portrait: string;
   landscape: string;
@@ -15,8 +17,8 @@ export function ButtonTabsImage({ portrait, landscape }: ButtonTabsImageProps) {
       animate="show"
       initial="hidden"
       whileHover="hover"
-      className="relative h-56 w-full md:order-2 md:h-full md:w-5/12 md:port:order-first 
-      md:port:h-64 md:port:w-full"
+      className="relative h-56 w-full md:order-2 md:h-full md:w-5/12 lg:max-w-lg 
+      md:port:order-first md:port:h-64 md:port:w-full"
     >
       <source srcSet={portrait} media="(min-width:950px)" />
       <Image
@@ -31,6 +33,8 @@ export function ButtonTabsImage({ portrait, landscape }: ButtonTabsImageProps) {
   );
 }
 
+//prettier-ignore
+{/* BUTTON TAB CONTENT */}
 type ButtonTabsContentProps = {
   name: string;
   description: string;

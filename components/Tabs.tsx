@@ -17,7 +17,7 @@ export function TabImage({ name, imgUrl }: TabImageProps) {
       animate="show"
       initial="hidden"
       whileHover="hover"
-      className="relative h-40 w-40 md:h-[325px] md:w-[325px] lg:h-[445px] lg:w-[445px] md:port:h-72 md:port:w-72"
+      className="relative h-40 w-40 md:h-[310px] md:w-[310px] lg:h-[445px] lg:w-[445px] md:port:h-72 md:port:w-72"
     >
       <Image fill sizes="100%" alt={`${name} image`} src={imgUrl} />
     </motion.div>

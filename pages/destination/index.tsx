@@ -1,22 +1,22 @@
 import React, { useState } from "react";
-import { LayoutSection } from "@/sections";
+import { LayoutSection, MainSection } from "@/sections";
 import { Tagline, TabImage, TabContent } from "@/components";
 import data from "@/public/data.json";
 
 export default function Destination() {
   const pageName = "destination";
+  const { destinations } = data;
   const [location, setLocation] = useState("Moon");
   return (
     <LayoutSection pageName={pageName}>
-      <main className="flex flex-col items-center justify-around lg:px-32">
+      <MainSection>
         <Tagline id="01" title="Pick your Destination" />
         <section
-          className="flex flex-col items-center justify-center gap-8 md:w-full md:flex-row 
-          md:justify-evenly lg:justify-between md:port:w-[34rem] md:port:flex-col
-          md:port:justify-between"
+          className="flex flex-col items-center justify-center gap-8 md:w-full md:flex-row md:justify-evenly  
+          md:port:w-[34rem] md:port:flex-col md:port:justify-between"
         >
           {/* TAB IMAGE */}
-          {data.destinations.map((destination) => {
+          {destinations.map((destination) => {
             if (destination.name === location) {
               return (
                 <TabImage
@@ -32,7 +32,7 @@ export default function Destination() {
           <section className="flex flex-col items-center gap-6 md:w-96 md:items-start md:port:items-center">
             {/* TABS*/}
             <div className="flex h-8 items-center gap-6 ">
-              {data.destinations.map((destination) => {
+              {destinations.map((destination) => {
                 return (
                   <div
                     key={destination.name}
@@ -57,7 +57,7 @@ export default function Destination() {
             </div>
 
             {/* TAB CONTENT */}
-            {data.destinations.map((destination) => {
+            {destinations.map((destination) => {
               if (destination.name === location) {
                 return (
                   <TabContent
@@ -72,7 +72,7 @@ export default function Destination() {
             })}
           </section>
         </section>
-      </main>
+      </MainSection>
     </LayoutSection>
   );
 }

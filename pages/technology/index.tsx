@@ -1,22 +1,23 @@
 import { useState } from "react";
-import { LayoutSection } from "@/sections";
+import { LayoutSection, MainSection } from "@/sections";
 import { Tagline, ButtonTabsImage, ButtonTabsContent } from "@/components";
 import data from "@/public/data.json";
 
 export default function Technology() {
   const pageName = "technology";
+  const { technology } = data;
   const [currentTab, setCurrentTab] = useState(0);
 
   return (
     <LayoutSection pageName={pageName}>
-      <main className="flex flex-col items-center justify-evenly md:justify-around md:px-16 lg:px-24">
+      <MainSection>
         <Tagline id="03" title="Space Launch 101" />
         <section
-          className="flex w-full flex-col items-center gap-8 md:h-[500px] md:flex-row 
-          md:justify-between md:port:h-auto md:port:flex-col"
+          className="flex w-full flex-col items-center gap-8 md:h-[500px] md:flex-row md:justify-evenly 
+          md:port:h-auto md:port:flex-col"
         >
           {/* BUTTON TAB IMAGE */}
-          {data.technology.map((tech, i) => {
+          {technology.map((tech, i) => {
             if (i === currentTab)
               return (
                 <ButtonTabsImage
@@ -31,7 +32,7 @@ export default function Technology() {
           <section className="flex flex-col items-center gap-6 md:flex-row md:gap-16 md:port:flex-col md:port:gap-10">
             {/* BUTTONS */}
             <div className="flex items-center gap-6 font-bellefair md:flex-col md:port:flex-row">
-              {data.technology.map((tech, i) => {
+              {technology.map((tech, i) => {
                 return (
                   <button
                     key={tech.name}
@@ -51,7 +52,7 @@ export default function Technology() {
             </div>
 
             {/* BUTTON TAB CONTENT */}
-            {data.technology.map((tech, i) => {
+            {technology.map((tech, i) => {
               if (i === currentTab)
                 return (
                   <ButtonTabsContent
@@ -63,7 +64,7 @@ export default function Technology() {
             })}
           </section>
         </section>
-      </main>
+      </MainSection>
     </LayoutSection>
   );
 }
