@@ -27,8 +27,9 @@ export default function Technology() {
               );
           })}
 
+          {/* BUTTON TAB CONTENT SECTION */}
           <section className="flex flex-col items-center gap-6 md:flex-row md:gap-16 md:port:flex-col md:port:gap-10">
-            {/* BUTTON TAB BUTTONS */}
+            {/* BUTTONS */}
             <div className="flex items-center gap-6 font-bellefair md:flex-col md:port:flex-row">
               {data.technology.map((tech, i) => {
                 return (

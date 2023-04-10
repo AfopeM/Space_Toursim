@@ -17,7 +17,7 @@ export function TabImage({ name, imgUrl }: TabImageProps) {
       animate="show"
       initial="hidden"
       whileHover="hover"
-      className="relative h-44 w-44 md:h-[350px] md:w-[350px] lg:h-[445px] lg:w-[445px] md:port:h-72 md:port:w-72"
+      className="relative h-40 w-40 md:h-[325px] md:w-[325px] lg:h-[445px] lg:w-[445px] md:port:h-72 md:port:w-72"
     >
       <Image fill sizes="100%" alt={`${name} image`} src={imgUrl} />
     </motion.div>
@@ -48,13 +48,13 @@ export function TabContent({name,description,distance,travel}: TabContentProps) 
         >
           {name}
         </h2>
-        <Textbox extraStyle="md:w-full md:port:w-[30rem] pb-4">
+        <Textbox extraStyle="md:w-full md:port:w-[30rem] pb-2">
           {description}
         </Textbox>
   
         <div
           className="flex w-full gap-4 border-t-2 border-solid border-brand-border 
-          pt-4 text-center font-bellefair text-2xl md:text-3xl uppercase text-brand-light justify-between 
+          pt-2 text-center font-bellefair text-2xl md:text-3xl uppercase text-brand-light justify-between 
          md:text-start md:port:text-center"
         >
           <p>

@@ -18,7 +18,7 @@ export function ButtonTabsImage({ portrait, landscape }: ButtonTabsImageProps) {
       className="relative h-56 w-full md:order-2 md:h-full md:w-5/12 md:port:order-first 
       md:port:h-64 md:port:w-full"
     >
-      <source srcSet={portrait} media="(min-width:768px)" />
+      <source srcSet={portrait} media="(min-width:950px)" />
       <Image
         fill
         priority
