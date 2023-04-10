@@ -12,7 +12,7 @@ export default function LayoutSection({pageName, children }: LayoutSectionProps)
     const pages = [
         {
             name: "home",
-            content: "bg-homeM md:bg-homeT lg:bg-homeD gap-0",
+            content: "bg-homeM md:bg-homeT lg:bg-homeD md:gap-0",
         },
         {
             name: "destination",
