@@ -17,17 +17,17 @@ export function ButtonTabsImage({ portrait, landscape }: ButtonTabsImageProps) {
       animate="animate"
       initial="initial"
       whileHover="hover"
-      className="relative h-56 w-full md:order-2 md:h-full md:w-5/12 lg:max-w-lg 
-      md:port:order-first md:port:h-64 md:port:w-full"
+      className="relative h-56 w-full md:h-full md:w-full 
+      lg:order-2 lg:max-w-lg md:port:order-first md:port:h-64"
     >
-      <source srcSet={portrait} media="(min-width:950px)" />
+      <source srcSet={portrait} media="(min-width:1440px)" />
       <Image
         fill
         priority
         alt={`image`}
         sizes="100%"
         src={landscape}
-        className="object-contain md:object-cover"
+        className="object-contain lg:object-cover"
       />
     </motion.picture>
   );
