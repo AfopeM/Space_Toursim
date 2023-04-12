@@ -13,7 +13,7 @@ export default function Technology() {
       <MainSection>
         <Tagline id="03" title="Space Launch 101" />
         <section
-          className="flex w-full flex-col items-center gap-8 md:h-[500px] md:flex-row md:justify-evenly 
+          className="flex w-full flex-col items-center gap-8 md:h-[500px] md:justify-evenly lg:flex-row 
           md:port:h-auto md:port:flex-col"
         >
           {/* BUTTON TAB IMAGE */}
@@ -68,3 +68,5 @@ export default function Technology() {
     </LayoutSection>
   );
 }
+// className="flex w-full flex-col items-center gap-8 md:h-[500px] md:flex-row md:justify-evenly
+// md:port:h-auto md:port:flex-col"

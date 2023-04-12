@@ -14,8 +14,8 @@ export function ButtonTabsImage({ portrait, landscape }: ButtonTabsImageProps) {
   return (
     <motion.picture
       variants={tabVariant("img")}
-      animate="show"
-      initial="hidden"
+      animate="animate"
+      initial="initial"
       whileHover="hover"
       className="relative h-56 w-full md:order-2 md:h-full md:w-5/12 lg:max-w-lg 
       md:port:order-first md:port:h-64 md:port:w-full"
@@ -45,8 +45,8 @@ export function ButtonTabsContent({ name, description }: ButtonTabsContentProps)
   return (
     <motion.article
       variants={tabVariant("content")}
-      animate="show"
-      initial="hidden">
+      animate="animate"
+      initial="initial">
       <h2
         className="pb-4 text-center font-bellefair text-2xl uppercase text-brand-light md:text-start 
                 md:text-5xl lg:text-6xl md:port:text-center md:port:text-3xl"

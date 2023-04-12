@@ -14,8 +14,8 @@ export function TabImage({ name, imgUrl }: TabImageProps) {
   return (
     <motion.div
       variants={tabVariant("img")}
-      animate="show"
-      initial="hidden"
+      animate="animate"
+      initial="initial"
       whileHover="hover"
       className="relative h-40 w-40 md:h-[310px] md:w-[310px] lg:h-[445px] lg:w-[445px] md:port:h-72 md:port:w-72"
     >
@@ -38,8 +38,8 @@ export function TabContent({name,description,distance,travel}: TabContentProps) 
     return (
       <motion.article 
       variants={tabVariant("content")}
-      animate="show"
-      initial="hidden"
+      animate="animate"
+      initial="initial"
       className="flex flex-col items-center gap-4 md:w-full md:items-start 
       md:port:items-center">
         <h2
