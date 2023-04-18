@@ -13,8 +13,8 @@ export default function Technology() {
       <MainSection>
         <Tagline id="03" title="Space Launch 101" />
         <section
-          className="flex w-full flex-col items-center gap-8 md:h-[500px] md:justify-evenly lg:flex-row 
-          md:port:h-auto md:port:flex-col"
+          className="flex w-full flex-col items-center gap-8 md:h-[500px] md:flex-row-reverse
+          md:justify-evenly md:port:h-auto md:port:flex-col"
         >
           {/* BUTTON TAB IMAGE */}
           {technology.map((tech, i) => {
@@ -29,7 +29,10 @@ export default function Technology() {
           })}
 
           {/* BUTTON TAB CONTENT SECTION */}
-          <section className="flex flex-col items-center gap-6 md:flex-row md:gap-16 md:port:flex-col md:port:gap-10">
+          <section
+            className="flex flex-col items-center gap-6 md:flex-row md:gap-12 
+            md:port:flex-col md:port:gap-10"
+          >
             {/* BUTTONS */}
             <div className="flex items-center gap-6 font-bellefair md:flex-col md:port:flex-row">
               {technology.map((tech, i) => {

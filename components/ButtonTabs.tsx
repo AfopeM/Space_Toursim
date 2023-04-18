@@ -18,9 +18,9 @@ export function ButtonTabsImage({ portrait, landscape }: ButtonTabsImageProps) {
       initial="initial"
       whileHover="hover"
       className="relative h-56 w-full md:h-full md:w-full 
-      lg:order-2 lg:max-w-lg md:port:order-first md:port:h-64"
+       lg:max-w-lg md:port:order-first md:port:h-64"
     >
-      <source srcSet={portrait} media="(min-width:1440px)" />
+      <source srcSet={portrait} media="(min-width:948px)" />
       <Image
         fill
         priority
@@ -46,19 +46,22 @@ export function ButtonTabsContent({ name, description }: ButtonTabsContentProps)
     <motion.article
       variants={tabVariant("content")}
       animate="animate"
-      initial="initial">
+      initial="initial"
+      className="flex flex-col items-center md:items-start md:port:items-center"
+      >
       <h2
-        className="pb-4 text-center font-bellefair text-2xl uppercase text-brand-light md:text-start 
-                md:text-5xl lg:text-6xl md:port:text-center md:port:text-3xl"
+        className="pb-4 text-center font-bellefair text-2xl uppercase text-brand-light 
+        md:text-start md:text-4xl lg:text-6xl md:port:text-center md:port:text-3xl"
       >
         <span className="block pb-2 font-barlow text-base tracking-widest text-brand">
           The terminology...
         </span>
         {name}
       </h2>
-      <Textbox extraStyle="md:w-[420px] lg:text-lg lg:leading-8">
+      <Textbox extraStyle="md:w-5/6 lg:text-lg lg:leading-8">
         {description}
       </Textbox>
     </motion.article>
   );
 }
+//
