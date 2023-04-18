@@ -68,5 +68,3 @@ export default function Technology() {
     </LayoutSection>
   );
 }
-// className="flex w-full flex-col items-center gap-8 md:h-[500px] md:flex-row md:justify-evenly
-// md:port:h-auto md:port:flex-col"

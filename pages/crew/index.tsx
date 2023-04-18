@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { LayoutSection, MainSection } from "@/sections";
 import { Tagline, Textbox } from "@/components";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { slideVariant } from "@/utils/motion";
 import Image from "next/image";
 import data from "@/public/data.json";
@@ -18,7 +18,6 @@ export default function Crew() {
     } else {
       setDirection("right");
     }
-
     setCurrentSlide(slide);
   }
 
@@ -37,7 +36,7 @@ export default function Crew() {
           >
             <div
               className="relative h-64 w-4/6 border-b-2 border-solid border-brand-border md:order-last
-            md:h-80 md:w-72 md:border-b-0 lg:h-[500px] md:port:w-full"
+            md:h-72 md:w-72 md:border-b-0 lg:h-[500px] md:port:w-full"
             >
               <Image
                 src={crew[currentSlide].image}
@@ -64,14 +63,14 @@ export default function Crew() {
             </div>
           </motion.article>
         </section>
-        <div className=" flex w-2/6 justify-around ">
+        <div className=" flex w-1/2 justify-around md:w-2/6 ">
           {crew.map((c, i) => {
             return (
               <button
                 key={c.name}
                 className={`${
                   i === currentSlide ? "bg-opacity-100" : "bg-opacity-20"
-                } h-3 w-3 rounded-full bg-brand-light md:h-4 md:w-4 lg:h-5 lg:w-5 lg:gap-12`}
+                } h-4 w-4 rounded-full bg-brand-light lg:h-5 lg:w-5 lg:gap-12`}
                 onClick={() => handleSlideDirection(i)}
               />
             );
