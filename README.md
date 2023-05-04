@@ -9,8 +9,7 @@ interactive animations and user-friendly navigation.
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?
-text=App+Screenshot+Here)
+![Home Screenshot](/public/screenshots/home.png)
 
 ## Features
 
