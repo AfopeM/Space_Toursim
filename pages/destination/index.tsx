@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { LayoutSection, MainSection } from "@/sections";
 import { Tagline, TabImage, TabContent } from "@/components";
-import { GetStaticProps } from "next";
+import { GetServerSideProps } from "next";
 import { IData } from "@/model/props";
 import data from "@/public/data.json";
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const env =
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
