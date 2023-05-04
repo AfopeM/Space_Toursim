@@ -1,19 +1,21 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { LayoutSection, MainSection } from "@/sections";
 import { Tagline, TabImage, TabContent } from "@/components";
 import data from "@/public/data.json";
 
 export default function Destination() {
-  const pageName = "destination";
   const { destinations } = data;
+  const pageName = "destination";
   const [location, setLocation] = useState("Moon");
+
   return (
     <LayoutSection pageName={pageName}>
       <MainSection>
         <Tagline id="01" title="Pick your Destination" />
         <section
-          className="flex flex-col items-center justify-center gap-8 md:w-full md:flex-row md:justify-evenly  
-          md:port:w-[34rem] md:port:flex-col md:port:justify-between"
+          className="flex flex-col items-center justify-center gap-8 md:w-full 
+          md:flex-row md:justify-evenly md:port:w-[34rem] md:port:flex-col 
+          md:port:justify-between"
         >
           {/* TAB IMAGE */}
           {destinations.map((destination) => {
@@ -29,9 +31,12 @@ export default function Destination() {
           })}
 
           {/* TAB CONTENT SECTION */}
-          <section className="flex flex-col items-center gap-6 md:w-96 md:items-start md:port:items-center">
+          <section
+            className="flex flex-col items-center gap-6 md:w-96 md:items-start 
+            md:port:items-center"
+          >
             {/* TABS*/}
-            <div className="flex h-8 items-center gap-6 ">
+            <div className="flex h-8 items-center gap-6">
               {destinations.map((destination) => {
                 return (
                   <div
