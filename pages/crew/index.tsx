@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { slideVariant } from "@/utils/motion";
 import Image from "next/image";
 import { GetStaticProps } from "next";
-import { IData } from "@/model/props";
+import type { IData } from "@/model/props";
 
 export const getStaticProps: GetStaticProps = async () => {
   const host =
