@@ -3,7 +3,6 @@ import { LayoutSection, MainSection } from "@/sections";
 import { Tagline, TabImage, TabContent } from "@/components";
 import { GetStaticProps } from "next";
 import { IData } from "@/model/props";
-import data from "@/public/data.json";
 
 export const getStaticProps: GetStaticProps = async () => {
   const host =
@@ -11,7 +10,6 @@ export const getStaticProps: GetStaticProps = async () => {
       ? "http://localhost:3000"
       : "https://spacextourism.netlify.app";
   const res = await fetch(`${host}/data.json`);
-  // const res = await fetch("http://localhost:3000/data.json");
   const { destinations }: IData = await res.json();
   return {
     props: {
@@ -21,10 +19,8 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 export default function Destination({ destinations }: IData) {
-  // const { destinations } = data;
   const pageName = "destination";
   const [location, setLocation] = useState("Moon");
-  // console.log(env);
 
   return (
     <LayoutSection pageName={pageName}>
