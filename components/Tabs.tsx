@@ -17,9 +17,16 @@ export function TabImage({ name, imgUrl }: TabImageProps) {
       animate="animate"
       initial="initial"
       whileHover="hover"
-      className="relative h-40 w-40 md:h-[310px] md:w-[310px] lg:h-[445px] lg:w-[445px] md:port:h-72 md:port:w-72"
     >
-      <Image fill sizes="100%" alt={`${name} image`} src={imgUrl} />
+      <Image
+        width={0}
+        height={0}
+        sizes="100%"
+        src={imgUrl}
+        alt={`${name} image`}
+        className="h-auto w-40 duration-500 ease-in-out 
+        md:w-[310px] lg:w-[445px] md:port:w-72"
+      />
     </motion.div>
   );
 }
@@ -34,7 +41,7 @@ type TabContentProps = {
 };
 
 //prettier-ignore
-export function TabContent({name,description,distance,travel}: TabContentProps) {
+export function TabContent({name, description, distance, travel}: TabContentProps) {
     return (
       <motion.article 
       variants={tabVariant("content")}

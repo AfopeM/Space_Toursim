@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { LayoutSection, MainSection } from "@/sections";
 import { Tagline, TabImage, TabContent } from "@/components";
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 import { IData } from "@/model/props";
 import data from "@/public/data.json";
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const env =
+export const getStaticProps: GetStaticProps = async () => {
+  const host =
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
       : "https://spacextourism.netlify.app";
-  const res = await fetch(`${env}/data.json`);
+  const res = await fetch(`${host}/data.json`);
   // const res = await fetch("http://localhost:3000/data.json");
   const { destinations }: IData = await res.json();
   return {
@@ -82,15 +82,7 @@ export default function Destination({ destinations }: IData) {
             {/* TAB CONTENT */}
             {destinations.map((destination) => {
               if (destination.name === location) {
-                return (
-                  <TabContent
-                    key={destination.name}
-                    name={destination.name}
-                    description={destination.description}
-                    distance={destination.distance}
-                    travel={destination.travel}
-                  />
-                );
+                return <TabContent key={destination.name} {...destination} />;
               }
             })}
           </section>
